@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .top-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 97%;
+          background-color: #80002f;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+        nav {
+          background-color: #80002f;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+          font-size: 1.8rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+
+        .nav-menu {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .nav-menu a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+          color: #ffcccb;
+        }
+
+        .login-btn {
+          background-color: white;
+          color: #80002f;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+          background-color: #ffcccb;
+        }
+        body {
+          margin: 0;
+          overflow: hidden; 
+      }
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1; 
+        }
+        .background-clip{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        @media (min-aspect-ratio:16/9){
+            .background-clip{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio:16/9){
+            .background-clip{
+                width: auto;
+                height: 100%;
+            }
+        }
+        .center-image{
+          width: 580px;
+          height:130px;
+          position: absolute; 
+          left: 450px;
+          align-items: center;
+        }
+
+        .auth-buttons {
+          display: flex;
+          gap: 1.2rem;
+          margin-top: 350px;
+          margin-bottom: 20px;
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .btn {
+          font-size: 1.05rem;
+          font-weight: 600;
+          padding: 1.75rem 2.8rem;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .login-btn {
+          background-color: #ffffff;
+          color: #80002f;
+          border: 2px solid #80002f;
+        }
+
+        .login-btn:hover {
+          background-color: #80002f;
+          color: #ffffff;
+        }
+
+        .signup-btn {
+          background-color: #ffffff;
+          color: #80002f;
+          border: 2px solid #80002f;
+        }
+
+        .signup-btn:hover {
+          background-color: #80002f;
+          color: #ffffff;
+        }
+
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Simulator</title>
+    <link rel="stylesheet" href="/styles/welcome.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-logo">AMRITA</div>
+    <div class="nav-menu">
+      <a href="https://www.amrita.edu/">Home</a>
+      <a href="https://www.amrita.edu/about/">About</a>
+      <a href="https://www.amrita.edu/academics/">Academics</a>
+      <a href="https://www.amrita.edu/research/">Research</a>
+      <a href="https://www.amrita.edu/admissions/">Admissions</a>
+    </div>
+  </nav>
+    <div class="video-container">
+        <video autoplay muted loop playus-inline class="background-clip">
+          <source src="assets/Untitled video - Made with Clipchamp (3).mp4" type="video/mp4">        
+    </video>
+    </div>
+    <img src="\assets\Amrita-vishwa-vidyapeetham-logo.png" class="center-image">
+    <div class="auth-buttons">
+      <a href="login.html" class="btn login-btn">LOGIN</a>
+      <a href="signup.html" class="btn signup-btn">SIGN UP</a>
+    </div>
+</body>
+</html>

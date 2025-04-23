@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Report</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #80002f;
+      margin-bottom: 2rem;
+    }
+
+    .filter-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-section label {
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    .filter-section select {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 0rem;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #80002f;
+      color: white;
+    }
+
+    thead th:first-child {
+      border-top-left-radius: 12px;
+    }
+
+    thead th:last-child {
+      border-top-right-radius: 12px;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+    }
+
+    tbody tr:hover {
+      background-color: #f8f1f4;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:last-child td:first-child {
+      border-bottom-left-radius: 12px;
+    }
+
+    tbody tr:last-child td:last-child {
+      border-bottom-right-radius: 12px;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Attendance Report</h2>
+
+    <div class="filter-section">
+      <form method="get">
+        <label for="academic_term">Academic Term:</label>
+        <select name="academic_term_id" id="academic_term" onchange="this.form.submit()">
+          <option value="11" selected>2024-25 Even Sem</option>
+          <option value="10">2024-25 Odd Sem</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Sl No</th>
+            <th>Class Name</th>
+            <th>Course</th>
+            <th>Faculty</th>
+            <th>Total</th>
+            <th>Present</th>
+            <th>Duty Leave</th>
+            <th>Absent</th>
+            <th>Percentage</th>
+            <th>Medical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>B.Tech..2024.R.CSE.41.23MEE115</td><td>23MEE115<br>Manufacturing Practice</td><td>JAYARAM R S</td><td>30</td><td>27</td><td>0</td><td>3</td><td>90</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

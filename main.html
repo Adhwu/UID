@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .auth-buttons {
+          display: flex;
+          gap: 1.2rem;
+          margin-top: 350px;
+          margin-bottom: 20px;
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .top-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 97%;
+          background-color: #80002f;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+        nav {
+          background-color: #80002f;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+          font-size: 1.8rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+
+        .nav-menu {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .nav-menu a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+          color: #ffcccb;
+        }
+
+        .background-clip{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        @media (min-aspect-ratio:16/9){
+            .background-clip{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio:16/9){
+            .background-clip{
+                width: auto;
+                height: 100%;
+            }
+        }
+        .textt{
+            position: absolute;
+            right: -500;
+            bottom: 0;
+            text-align: center;
+            font-family:'Times New Roman', Times, serif ;
+            font-size: large;
+        }
+        .h1{
+            font-family:'Times New Roman', Times, serif ;
+            font-size: xx-large;
+        }
+        .p{
+            font-family:'Times New Roman', Times, serif ;
+            font-size: large;
+        }
+        .centre-image{
+            width: 580px;
+            height:130px;
+            position: absolute; 
+            top: 200px;
+            align-items: center;
+        }
+        .top-right-logo{
+            width: 150px;
+            height:60px;
+            position: absolute; 
+            right: 10px;
+            top: 40px
+        }
+        .heading{
+            position: absolute;
+            right: -500;
+            top: 0;
+            text-align: center;
+            font-family:'Times New Roman', Times, serif ;
+            font-size: large;
+        }
+        .btn {
+          font-size: 1.05rem;
+          font-weight: 600;
+          padding: 1.75rem 2.8rem;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .login-btn {
+          background-color: #ffffff;
+          color: #80002f;
+          border: 2px solid #80002f;
+        }
+
+        .login-btn:hover {
+          background-color: #80002f;
+          color: #ffffff;
+        }
+        .signup-btn {
+          background-color: #ffffff;
+          color: #80002f;
+          border: 2px solid #80002f;
+        }
+        .signup-btn:hover {
+          background-color: #80002f;
+          color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-logo">AMRITA</div>
+        <div class="nav-menu">
+          <a href="https://www.amrita.edu/">Home</a>
+          <a href="https://www.amrita.edu/about/">About</a>
+          <a href="https://www.amrita.edu/academics/">Academics</a>
+          <a href="https://www.amrita.edu/research/">Research</a>
+          <a href="https://www.amrita.edu/admissions/">Admissions</a>
+        </div>
+    </nav>
+    <img src="\assets\Amrita-vishwa-vidyapeetham-logo.png" class="centre-image">
+    <div class="video-container">
+        <video autoplay muted loop playus-inline class="background-clip">
+          <source src="/assets/amrita 123.mp4" type="video/mp4"> 
+        </video>
+    </div>
+    <div class="auth-buttons">
+        <a href="/student.html?flow=student" class="btn login-btn">SUBJECT ATTENDANCE</a>
+        <a href="/tutorial.html?flow=tutorial" class="btn signup-btn">FULL ATTENDANCE</a>
+    </div>
+      
+</body>
+</html>

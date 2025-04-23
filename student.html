@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/styles/tutorial.css">
+    <script src="/scripts/student.js" defer></script>
+    <style>
+        .top-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 97%;
+          background-color: #80002f;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+        nav {
+          background-color: #80002f;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+          font-size: 1.8rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+
+        .nav-menu {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .nav-menu a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+          color: #ffcccb;
+        }
+
+        .background-clip{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        @media (min-aspect-ratio:16/9){
+            .background-clip{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio:16/9){
+            .background-clip{
+                width: auto;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-logo">AMRITA</div>
+        <div class="nav-menu">
+          <a href="https://www.amrita.edu/">Home</a>
+          <a href="https://www.amrita.edu/about/">About</a>
+          <a href="https://www.amrita.edu/academics/">Academics</a>
+          <a href="https://www.amrita.edu/research/">Research</a>
+          <a href="https://www.amrita.edu/admissions/">Admissions</a>
+        </div>
+    </nav>
+    <div class="card-container" id="card-container">
+        <!-- Cards will be inserted here by JavaScript -->
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop playus-inline class="background-clip">
+          <source src="\assets\anokha.mp4" type="video/mp4">      
+    </video>
+    </div>
+</body>
+</html>

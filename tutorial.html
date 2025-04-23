@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/styles/tutorial.css">
+    <script src="/scripts/tutorial.js" defer></script>
+    <style>
+        body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 2rem;
+        }
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        h2 {
+        text-align: center;
+        color: #80002f;
+        margin-bottom: 2rem;
+        }
+
+        .filter-section {
+        margin-bottom: 1.5rem;
+        }
+
+        .filter-section label {
+        font-weight: bold;
+        margin-right: 1rem;
+        }
+
+        .filter-section select {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        }
+
+        .table-responsive {
+        overflow-x: auto;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        }
+
+        thead {
+        background-color: #80002f;
+        color: white;
+        }
+
+        th,
+        td {
+        text-align: center;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        }
+
+        thead th:first-child {
+        border-top-left-radius: 12px;
+        }
+
+        thead th:last-child {
+        border-top-right-radius: 12px;
+        }
+
+        tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 12px;
+        }
+
+        tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 12px;
+        }
+
+        tbody tr:hover {
+        background-color: #f8f1f4;
+        }
+
+        tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+        }
+        .video-container{
+            position: absolute;
+            z-index: -1;
+        }
+        @media (min-aspect-ratio:16/9){
+            .background-clip{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio:16/9){
+            .background-clip{
+                width: auto;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="filter-section">
+          <form method="get">
+            <label for="academic_term">Academic Term:</label>
+            <select name="academic_term_id" id="academic_term" onchange="this.form.submit()">
+              <option value="11" selected>2024-25 Even Sem</option>
+            </select>
+          </form>
+        </div>
+    
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Sl No</th>
+                <th>Class Name</th>
+                <th>Course</th>
+                <th>Faculty</th>
+                <th>Total</th>
+                <th>Present</th>
+                <th>Duty Leave</th>
+                <th>Absent</th>
+                <th>Percentage</th>
+                <th>Medical</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>B.Tech..2024.R.CSE.31.23MAT116</td><td>23MAT116<br>Discrete Mathematics</td><td>RAJA S</td><td>57</td><td>50</td><td>0</td><td>7</td><td>87.72</td><td>0</td></tr>
+              <tr><td>2</td><td>B.Tech..2024.R.CSE.32.22ADM111</td><td>22ADM111<br>Glimpses of Glorious India</td><td>Aravind C B</td><td>27</td><td>25</td><td>0</td><td>2</td><td>92.59</td><td>0</td></tr>
+              <tr><td>3</td><td>B.Tech..2024.R.CSE.36.23CSE111</td><td>23CSE111<br>Object Oriented Programming</td><td>S L Jothilakshmi</td><td>55</td><td>47</td><td>0</td><td>8</td><td>85.45</td><td>0</td></tr>
+              <tr><td>4</td><td>B.Tech..2024.R.CSE.36.23CSE113</td><td>23CSE113<br>User Interface Design</td><td>Sumithra R P</td><td>47</td><td>42</td><td>0</td><td>5</td><td>89.36</td><td>0</td></tr>
+              <tr><td>5</td><td>B.Tech..2024.R.CSE.38.23MAT117</td><td>23MAT117<br>Linear Algebra</td><td>Anukumar Kathirvel S</td><td>57</td><td>50</td><td>0</td><td>7</td><td>87.72</td><td>0</td></tr>
+              <tr><td>6</td><td>B.Tech..2024.R.CSE.41.23MEE115</td><td>23MEE115<br>Manufacturing Practice</td><td>JAYARAM R S</td><td>30</td><td>27</td><td>0</td><td>3</td><td>90</td><td>0</td></tr>
+              <tr><td>7</td><td>B.Tech..2024.R.CSE.41.23PHY115</td><td>23PHY115<br>Modern Physics</td><td>Kumara Dhas M</td><td>37</td><td>31</td><td>0</td><td>6</td><td>83.78</td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <div class="video-container">
+        <video autoplay muted loop playus-inline class="background-clip">
+          <source src="\assets\videoplayback_3.mp4" type="video/mp4"> 
+    </video>
+    </div>
+</body>
+</html>
